@@ -7,7 +7,7 @@ import ast
 # Function to load and process data
 @st.cache_data
 def load_and_process_data():
-    data = pd.read_csv('book_word_frequencies.csv')
+    data = pd.read_csv('book_word_frequencies_updated.csv')
     # Convert the 'Most Common Words' column from string to list of tuples
     data['Most Common Words'] = data['Most Common Words'].apply(ast.literal_eval)
 
