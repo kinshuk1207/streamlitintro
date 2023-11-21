@@ -52,6 +52,13 @@ def main():
     ax.bar(words, counts)
     plt.xticks(rotation=45)
     st.pyplot(fig)
+    
+    st.dataframe(year_word_freq[selected_year])
+    
+    df_temp = pd.read_csv('gutenberg_top_100_with_metadata.csv')
+    
+    st.dataframe(df_temp)
+
 
 if __name__ == "__main__":
     main()
